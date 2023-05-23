@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/searchBar"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="@color/light">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/ic_baseline_search_24"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="8dp"
+            android:paddingEnd="10dp"
+            android:ems="10"
+            android:text="Search"
+            android:paddingStart="10dp"
+            android:textColor="#1B5E20"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cropPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crop Price"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_below="@+id/searchBar"
+        android:layout_margin="8dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/showPrice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cropPrice" />
+</RelativeLayout>

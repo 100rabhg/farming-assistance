@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProductDetail">
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/back"
+            android:contentDescription="backButton"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="INCLUDE SOME DETAILS"
+            android:textColor="@color/fill"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/bar"
+        android:background="@drawable/bottom_border"
+        android:orientation="horizontal" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/border"
+        android:progressTint="@color/blue"
+        android:visibility="gone"
+        android:max="100"
+        android:min="0"
+        />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/btnNext"
+    android:layout_below="@+id/progressBar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtVariety"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:labelFor="@+id/edtVariety"
+        android:text="Variety*"
+        android:visibility="gone"/>
+    <EditText
+        android:id="@+id/edtVariety"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVariety"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:importantForAutofill="no"
+        android:maxLength="20"
+        android:inputType="text"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txtAdTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtVariety"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:labelFor="@+id/edtAdTitle"
+        android:text="Ad Title*"/>
+
+        <EditText
+            android:id="@+id/edtAdTitle"
+            android:inputType="textShortMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAdTitle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:importantForAutofill="no"
+            android:maxLength="15"
+            android:minHeight="48dp"/>
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtAdTitle"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:labelFor="@+id/edtDescription"
+        android:text="Describe what you are selling*"/>
+
+        <EditText
+            android:id="@+id/edtDescription"
+            android:importantForAutofill="no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDescription"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:inputType="text|textMultiLine"
+            android:isScrollContainer="false"
+            android:maxHeight="150dp"
+            android:maxLength="300"
+            android:maxLines="12"
+            android:minHeight="48dp"
+            android:nestedScrollingEnabled="true"
+            android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtDescription"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:labelFor="@+id/edtQuantity"
+        android:text="@string/quan"/>
+
+        <EditText
+            android:id="@+id/edtQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtQuantity"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="10"
+            android:minHeight="48dp"/>
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtQuantity"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:labelFor="@+id/edtPrice"
+        android:text="Price*"/>
+        <LinearLayout
+            android:id="@+id/PriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPrice"
+            android:layout_marginStart="10dp"
+            android:maxHeight="48dp">
+
+        <TextView
+            android:id="@+id/txtPriceSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/edtPrice"
+            android:maxHeight="48dp"
+            android:text="\u20B9"
+            android:textSize="28dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <EditText
+            android:id="@+id/edtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginRight="10dp"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="10"
+            tools:ignore="RtlHardcoded"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PriceLayout"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/border_up_and_down"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/fill"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/selectedLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search city,area"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/selectLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select location"
+                    android:textColor="@color/red"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:contentDescription="location"
+                android:tint="@color/fill"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/upPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Upload photo"
+            android:textColor="@color/fill"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/uploadError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upPhoto"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_horizontal"
+            android:text="Image required"
+            android:textColor="@color/red"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/uploadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/uploadError"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/fromCamera"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/primaryLightColor"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="camera"
+                    android:src="@drawable/baseline_camera_alt_24"
+                    android:tint="@color/fill" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="TAKE A PICTURE"
+                    android:textColor="@color/fill"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fromGallery"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@color/primaryLightColor"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="gallery"
+                    android:src="@drawable/baseline_photo_library_24"
+                    android:tint="@color/fill" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="GALLERY"
+                    android:textColor="@color/fill"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/uploadLayout"
+            android:layout_margin="20dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="Post Now"
+        android:textSize="18dp"
+        tools:ignore="SpUsage,TextSizeCheck"/>
+
+</RelativeLayout>

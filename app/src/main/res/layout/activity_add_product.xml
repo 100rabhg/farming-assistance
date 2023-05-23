@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProduct">
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/back"
+            android:contentDescription="backButton"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:text="WHAT ARE YOU OFFERING?"
+            android:textColor="@color/fill"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/bar"
+        android:background="@drawable/bottom_border"
+        android:orientation="horizontal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        />
+
+</RelativeLayout>

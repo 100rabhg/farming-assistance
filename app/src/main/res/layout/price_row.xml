@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:id="@+id/price_rowR1">
+    <TextView
+        android:id="@+id/txtState"
+        android:text="Madhya pradesh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="0dp"
+        />
+
+    <TextView
+        android:id="@+id/txtDistrict"
+        android:text="Indore"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="0dp"
+        android:layout_alignBaseline="@+id/txtState"
+        />
+
+    <TextView
+        android:id="@+id/txtMarket"
+        android:layout_width="wrap_content"
+        android:text="market"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="0dp"
+        android:layout_alignBaseline="@+id/txtState"/>
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:id="@+id/price_rowR2"
+    android:layout_marginTop="20dp"
+
+    >
+    <TextView
+        android:id="@+id/txtCommodity"
+        android:text="commodity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/txtVariety"
+        android:text="variety"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@+id/txtCommodity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="0dp"
+        />
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/price_rowR3"
+        android:padding="5dp"
+        android:layout_marginTop="40dp"
+        >
+    <TextView
+        android:id="@+id/txtMin_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        tools:ignore="MissingConstraints"
+        android:text="min price"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/txtMax_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#00ff00"
+        android:layout_alignBaseline="@+id/txtMin_price"
+        android:layout_centerHorizontal="true"
+        tools:ignore="MissingConstraints"
+        android:text="msx price"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/txtModel_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:text="Model price"
+        android:layout_marginTop="0dp"
+        android:layout_alignBaseline="@+id/txtMin_price"
+        android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

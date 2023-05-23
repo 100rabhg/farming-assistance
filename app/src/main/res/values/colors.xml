@@ -1,0 +1,28 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+  <color name="teal_200">#FF03DAC5</color>
+  <color name="teal_700">#FF018786</color>
+  <color name="black">#000000</color>
+  <color name="white">#FFFFFFFF</color>
+  <color name="red">#E41919</color>
+  <color name="green">#02AA02</color>
+  <color name="blue">#03A9F4</color>
+  <color name="darkBlue">#057AAF</color>
+  <color name="grey">#323131</color>
+  <color name="light">#BADC99</color>
+  <color name="lightBack">#EDEDED</color>
+  <color name="lightBtnBack">#333333</color>
+  <color name="primaryColor">#1b5e20</color>
+  <color name="primaryLightColor">#4c8c4a</color>
+  <color name="primaryDarkColor">#003300</color>
+  <color name="secondaryColor">#4fc3f7</color>
+  <color name="secondaryLightColor">#8bf6ff</color>
+  <color name="secondaryDarkColor">#0093c4</color>
+  <color name="primaryTextColor">#ffffff</color>
+  <color name="secondaryTextColor">#ffffff</color>
+  <color name="back">#ffffff</color>
+  <color name="backGrey">#eeeeee</color>
+  <color name="fill">#000000</color>
+  <color name="greyLight">#CAC9C9</color>
+  <color name="profileColor">#3B6707</color>
+</resources>

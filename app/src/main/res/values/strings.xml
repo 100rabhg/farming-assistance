@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">farming assistance</string>
+    <string name="login">Login</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="forget_password">Forget password</string>
+    <string name="or_sign_in_with">Or sign in with</string>
+    <string name="or_sign_up_with">Or sign up with</string>
+    <string name="forget">Find your account</string>
+    <string name="wrong_email_or_password">wrong email or password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="username">username</string>
+    <string name="Email">Email</string>
+
+    <!--    Do not change in item listed item if change also change in Home activity onSuccess method   -->
+
+    <string name="farmer">Farmer</string>
+    <string name="wholesaler">Wholesaler</string>
+    <string-array name="type">
+        <item>@string/farmer</item>
+        <item>@string/wholesaler</item>
+    </string-array>
+    <string name="ms"><![CDATA[%1$s m<sup><small><small>2</small></small><sup>]]></string>
+    <string name="send_link_on_mail">Send Link On Mail</string>
+    <string name="quanInKg">Quantity (Kg)*</string>
+    <string name="quan">Quantity*</string>
+
+
+<!-- This key is important  should not go and visible to public before making public repo make sure this key is removed -->
+
+    <string name="Api_key" formatted="false" translatable="false">PUT_YOUR_APIKEY_OF_GOOGLE_MAP</string>
+
+</resources>

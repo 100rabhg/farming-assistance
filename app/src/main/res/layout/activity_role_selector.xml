@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_1"
+    tools:context=".Role_Selector">
+
+
+    <TextView
+        android:id="@+id/signuptitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:text="Create Password"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+
+        android:id="@+id/edtpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_password_24"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:autofillHints="password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColorHint="@color/black"
+        />
+
+    <EditText
+
+        android:id="@+id/edtrepassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtpassword"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_password_24"
+        android:drawablePadding="20dp"
+        android:autofillHints="password"
+        android:hint="Confirm-Password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColorHint="@color/black"
+        />
+<!--or iski length sahii kar dena -->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtrepassword"
+        android:layout_alignBottom="@+id/edtrepassword"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="-81dp"
+        android:background="@drawable/input_bg"
+        android:contentDescription="role selector"
+        android:layout_alignStart="@+id/edtrepassword"
+        android:layout_marginEnd="10dp"
+        />
+
+<!--    vicky isko sahi kar ke laga dena-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnererror"
+        android:text="select role"
+        android:layout_below="@+id/spinner"
+        android:visibility="invisible"
+        android:textColor="@color/red"
+        />
+
+
+
+    <Button
+        android:layout_width="118dp"
+        android:id="@+id/btnsignup"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinner"
+        android:layout_alignBottom="@+id/edtrepassword"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="-144dp"
+        android:background="@drawable/input_bg"
+        android:text="Sign Up" />
+
+</RelativeLayout>

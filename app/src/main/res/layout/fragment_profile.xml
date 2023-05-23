@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/profileColor"
+            android:padding="15dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/profileView"
+                android:layout_alignParentEnd="true"
+                android:background="@color/profileColor"
+                android:text="sign out"
+                android:textSize="16dp"
+                tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/profileView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="PROFILE VIEW"
+                android:textColor="@color/fill"
+                android:textSize="25sp"/>
+
+            <ImageView
+                android:id="@+id/profileDefaultIcon"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_below="@+id/profileView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_baseline_person_outline_24"
+                android:contentDescription="defaultIcon" />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userEmailLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="E-mail"
+                android:tooltipText="user name">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawableTint="@color/fill"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/userRoleLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="false"
+                    android:hint="role"
+                    android:tooltipText="user name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/userRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:drawableStart="@drawable/ic_baseline_person_outline_24"
+                        android:drawableTint="@color/fill"
+                        android:drawablePadding="10dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userFullNameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:hint="user name"
+                android:tooltipText="user name">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_baseline_person_outline_24"
+                    android:drawableTint="@color/fill"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userContactNumberLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="contact number"
+                android:tooltipText="user name">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userContactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                    android:drawableTint="@color/fill"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/updateProfileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/profileColor"
+                android:text="update details"
+                android:layout_margin="15dp"
+                android:elevation="10dp"
+                android:textColor="@color/fill"
+                android:textSize="20sp"/>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="7dp"
+        app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvforget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/forget"
+        android:textColor="@color/fill"
+        android:textSize="25sp"
+        tools:ignore="InvalidId"/>
+
+    <EditText
+        android:id="@+id/edtemaildialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvforget"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/input_bg"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawableTint="@color/fill"
+        android:drawablePadding="20dp"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColor="@color/fill"
+        android:textColorHint="@color/fill" />
+
+    <Button
+        android:id="@+id/btnforget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtemaildialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="@color/fill"
+        android:text="@string/send_link_on_mail"
+        android:textAllCaps="false"
+        android:textSize="20sp"/>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
